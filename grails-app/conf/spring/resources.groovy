@@ -12,14 +12,22 @@ beans = {
 
     si.channel(id: "chargedBookings")
     si."service-activator"("input-channel": "chargedBookings",
-                           "output-channel": "emailConfirmationRequests",
+                           "output-channel": "completedBookings",
                             ref: "seatAvailabilityService",
                             method: "confirmSeat")
+
+    si."publish-subscribe-channel"(id: "completedBookings")
+    si.bridge("input-channel": "completedBookings",
+              "output-channel":"emailConfirmationRequests")
 
     si.channel(id: "emailConfirmationRequests") {
         queue(capacity: 2)
     }
     si."outbound-channel-adapter"(channel: "emailConfirmationRequests",
                                   ref: "emailConfirmationService")
+
+    si."service-activator"("input-channel": "completedBookings",
+                            ref: "statsService",
+                            method: "gatherStats")
 
 }
