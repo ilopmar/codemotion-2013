@@ -34,12 +34,18 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
+        mavenRepo "https://oss.sonatype.org/content/repositories/snapshots/"
     }
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 
-        compile('org.springframework.integration:spring-integration-core:2.2.5.RELEASE')
+        compile('org.springframework.integration:spring-integration-core:2.2.5.RELEASE',
+                'org.springframework.integration:spring-integration-file:2.2.5.RELEASE')
+
+        compile 'org.im4java:im4java:1.4.0'
+
+        compile 'org.atmosphere:atmosphere-runtime:1.1.0.RC4'
     }
 
     plugins {
@@ -47,5 +53,9 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.8.3"
         runtime ":resources:1.2"
         build ":tomcat:$grailsVersion"
+
+        compile ":events-push:1.0.M7", {
+            excludes 'resources', 'atmosphere-runtime'
+        }
     }
 }

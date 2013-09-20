@@ -89,3 +89,5 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+codemotion.photos.webpath = "/home/ivan/workspaces/codemotion2013/web-app/photos"
