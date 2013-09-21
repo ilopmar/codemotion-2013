@@ -2,6 +2,7 @@ beans = {
 
     xmlns si:   "http://www.springframework.org/schema/integration"
     xmlns file: "http://www.springframework.org/schema/integration/file"
+    xmlns xmpp: "http://www.springframework.org/schema/integration/xmpp"
 
     // Flight
     si.poller(default:"true", "fixed-rate":"1000")
@@ -57,5 +58,17 @@ beans = {
     si."service-activator"("input-channel": "filesProcessed",
                             ref: "browserPushService",
                             method: "pushToBrowser")
+
+    // XMPP
+    xmpp."xmpp-connection"(id: "xmppConnection",
+                           user: grailsApplication.config.codemotion.xmpp.user,
+                           password: grailsApplication.config.codemotion.xmpp.password,
+                           host: grailsApplication.config.codemotion.xmpp.host,
+                           "service-name": grailsApplication.config.codemotion.xmpp.service,
+                           port: grailsApplication.config.codemotion.xmpp.port)
+
+    // XMPP Send messages to user
+    si.channel(id: "toUserChannel")
+    xmpp."outbound-channel-adapter"(channel:"toUserChannel")
 
 }

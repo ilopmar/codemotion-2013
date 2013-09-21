@@ -41,7 +41,8 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 
         compile('org.springframework.integration:spring-integration-core:2.2.5.RELEASE',
-                'org.springframework.integration:spring-integration-file:2.2.5.RELEASE')
+                'org.springframework.integration:spring-integration-file:2.2.5.RELEASE',
+                'org.springframework.integration:spring-integration-xmpp:2.2.5.RELEASE')
 
         compile 'org.im4java:im4java:1.4.0'
 

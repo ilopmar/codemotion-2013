@@ -90,4 +90,16 @@ log4j = {
            'net.sf.ehcache.hibernate'
 }
 
-codemotion.photos.webpath = "/home/ivan/workspaces/codemotion2013/web-app/photos"
+codemotion {
+    photos.webpath = "/home/ivan/workspaces/codemotion2013/web-app/photos"
+
+    xmpp {
+        user = "MY-USER-ACCOUNT"
+        password = "MY-PASSWORD"
+        host = "XMPP-SERVER-IP" // talk.google.com
+        service = "MyApp"
+        port = 5222
+        friend = "MY-FRIEND-ACCOUNT"
+    }
+}
+
