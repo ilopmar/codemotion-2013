@@ -46,4 +46,8 @@ class XmppService {
 
         toUserChannel.send(message)
     }
+
+    public void sendByEmail(String msg) {
+        println "Sending by email..."
+    }
 }

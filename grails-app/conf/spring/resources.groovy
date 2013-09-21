@@ -96,9 +96,13 @@ beans = {
                             ref: "xmppService",
                             method: "executeCommand")
 
-    si.channel(id: "commandResponse")
+    si."publish-subscribe-channel"(id: "commandResponse")
     si."service-activator"("input-channel": "commandResponse",
                             ref: "xmppService",
                             method: "sendByXMPP")
+
+    si."service-activator"("input-channel": "commandResponse",
+                            ref: "xmppService",
+                            method: "sendByEmail")
 
 }
