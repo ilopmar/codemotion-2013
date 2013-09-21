@@ -71,4 +71,34 @@ beans = {
     si.channel(id: "toUserChannel")
     xmpp."outbound-channel-adapter"(channel:"toUserChannel")
 
+    // XMPP Filter
+    xmpp."inbound-channel-adapter"(channel: "fromUserChannel")
+    si.filter("input-channel": "fromUserChannel",
+              expression: "payload.startsWith('command ')",
+              "discard-channel": "chatChannelMessageReceived",
+              "output-channel": "chatChannelCommand")
+
+    // Normal message received
+    si.channel(id: "chatChannelMessageReceived")
+    si."service-activator"("input-channel": "chatChannelMessageReceived",
+                            ref: "xmppService",
+                            method: "chatMessageReceived")
+
+    // Command message
+    si.channel(id: "chatChannelCommand")
+    si.transformer("input-channel": "chatChannelCommand",
+                   ref: "xmppService",
+                   method: "parseCommand",
+                   "output-channel": "validCommands")
+    // Execute the command
+    si."service-activator"("input-channel": "validCommands",
+                           "output-channel": "commandResponse",
+                            ref: "xmppService",
+                            method: "executeCommand")
+
+    si.channel(id: "commandResponse")
+    si."service-activator"("input-channel": "commandResponse",
+                            ref: "xmppService",
+                            method: "sendByXMPP")
+
 }
