@@ -11,7 +11,7 @@ The project repo has the following tags:
 - photo: Demo integrating with filesystem without pain and pushing pictures to browsers in real time.
 - xmpp: Interact with an XMPP bot to check the weather and the stocks.
 
-The slides of the talk are available at [my slideshare profile](http://www.slideshare.net/ilopmar/presentations)
+The slides of the talk are available at [slideshare](http://www.slideshare.net/ilopmar/quiero-tiempo-real-y-lo-quiero-para-ayer).
 
 You can contact me at lopez.ivan@gmail.com or via twitter [@ilopmar](https://twitter.com/ilopmar)
 
