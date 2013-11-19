@@ -1,7 +1,7 @@
 Codemotion 2013
 ===============
 
-![Still maintained](http://stillmaintained.com/lmivan/codemotion-2013.png "http://stillmaintained.com/lmivan/codemotion-2013")
+[![Still maintained](http://stillmaintained.com/lmivan/codemotion-2013.png)](http://stillmaintained.com/lmivan/codemotion-2013")
 
 This is the demo project for my talk [¡Quiero tiempo real y lo quiero para ayer!](http://codemotion.es/talk/19-october/88) from Codemotion 2013.
 
