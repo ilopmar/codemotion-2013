@@ -17,3 +17,7 @@ The slides of the talk are available at [slideshare](http://www.slideshare.net/i
 
 You can contact me at lopez.ivan@gmail.com or via twitter [@ilopmar](https://twitter.com/ilopmar)
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lmivan/codemotion-2013/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
