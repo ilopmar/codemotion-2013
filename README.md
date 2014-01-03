@@ -2,6 +2,7 @@ Codemotion 2013
 ===============
 
 [![Still maintained](http://stillmaintained.com/lmivan/codemotion-2013.png)](http://stillmaintained.com/lmivan/codemotion-2013")
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lmivan/codemotion-2013/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 This is the demo project for my talk [¡Quiero tiempo real y lo quiero para ayer!](http://codemotion.es/talk/19-october/88) from Codemotion 2013.
 
@@ -16,8 +17,3 @@ The project repo has the following tags:
 The slides of the talk are available at [slideshare](http://www.slideshare.net/ilopmar/quiero-tiempo-real-y-lo-quiero-para-ayer).
 
 You can contact me at lopez.ivan@gmail.com or via twitter [@ilopmar](https://twitter.com/ilopmar)
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lmivan/codemotion-2013/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
